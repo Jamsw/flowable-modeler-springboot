@@ -1,0 +1,16 @@
+server:
+  port: 8089
+spring:
+  datasource:
+    driver-class-name : com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/flowable03?characterEncoding=UTF-8&nullCatalogMeansCurrent=true
+    username: root
+    password: root
+logging:
+  level:
+    ROOT: info
+flowable:
+  #关闭定时任务JOB
+  async-executor-activate: false
+  #将databaseSchemaUpdate设置为true。当Flowable发现库与数据库表结构不一致时，会自动将数据库表结构升级至新版本。
+  database-schema-update: true
